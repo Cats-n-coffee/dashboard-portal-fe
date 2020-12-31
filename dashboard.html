@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script defer src="dashboard.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id="dash-main-container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Search</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="dash-summary-numbers">
+                <div id="dash=summary-1"></div>
+                <div id="dash=summary-2"></div>
+                <div id="dash=summary-3"></div>
+                <div id="dash=summary-4"></div>
+            </div>
+            <div class="dash-graphs">
+                <div id="dash-graph-1">
+                    <canvas id="chart-1"></canvas>
+                </div>
+                <div id="dash-graph-2">
+                    <canvas id="chart-2"></canvas>
+                </div>
+            </div>
+            <div class="dash-logs">
+                <table>
+
+                </table>
+            </div>
+        </main>
+        <footer>Dashboard page</footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</body>
+</html>
