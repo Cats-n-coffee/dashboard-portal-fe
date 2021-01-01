@@ -12,16 +12,17 @@
     <div id="dash-main-container">
         <div class="sidebar">
             <nav>
+                <span id="expand-sidebar"><i class="fas fa-chevron-right"></i></span>
                 <div class="sidebar-username">
                     <span>Username</span>
                 </div>
                 <ul>
-                    <li><a href="#">Graphs</a></li>
-                    <li><a href="#">Graphs</a></li>
-                    <li><a href="#">Graphs</a></li>
-                    <li><a href="#">Graphs</a></li>
-                    <li><a href="#">Graphs</a></li>
-                    <li><a href="#">Graphs</a></li>
+                    <li><a href="#"><i class="fas fa-hand-holding-usd"></i><span>Sales</span></a></li>
+                    <li><a href="#"><i class="far fa-star"></i><span>New Products</span></a></li>
+                    <li><a href="#"><i class="fas fa-search"></i><span>Reviews</span></a></li>
+                    <li><a href="#"><i class="fas fa-users"></i><span>Manage Staff</span></a></li>
+                    <li><a href="#"><i class="far fa-user"></i><span>Profile</span></a></li>
+                    <li><a href="#"><i class="fas fa-cogs"></i><span>Settings</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -30,38 +31,40 @@
                 <ul>
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Logout</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <div class="dash-summary-numbers">
-                <div id="dash=summary-1" class="summary-box">
-                    <span>Hi</span>
-                    <span>123</span>
-                    <span>Persons</span>
+                <div id="dash-summary-1" class="summary-box">
+                    <span><i class="fas fa-hand-holding-usd"></i></span>
+                    <span>$2,345.45</span>
+                    <span>Total Sales</span>
                 </div>
-                <div id="dash=summary-2" class="summary-box">
-                    <span>Hi</span>
-                    <span>123</span>
-                    <span>Persons</span>
+                <div id="dash-summary-2" class="summary-box">
+                    <span><i class="far fa-star"></i></span>
+                    <span>3</span>
+                    <span>New Products Releases</span>
                 </div>
-                <div id="dash=summary-3" class="summary-box">
-                    <span>Hi</span>
-                    <span>123</span>
-                    <span>Persons</span>
+                <div id="dash-summary-3" class="summary-box">
+                    <span><i class="fas fa-search"></i></span>
+                    <span>5</span>
+                    <span>Products Under Review</span>
                 </div>
-                <div id="dash=summary-4" class="summary-box">
-                    <span>Hi</span>
+                <div id="dash-summary-4" class="summary-box">
+                    <span><i class="fas fa-user-plus"></i></span>
                     <span>123</span>
-                    <span>Persons</span>
+                    <span>New Users</span>
                 </div>
             </div>
             <div class="dash-graphs">
                 <div id="dash-graph-1" class="graph-section">
+                    <p>Bar Chart</p>
                     <canvas id="chart-1"></canvas>
                 </div>
                 <div id="dash-graph-2" class="graph-section">
+                    <p>Line Chart</p>
                     <canvas id="chart-2"></canvas>
                 </div>
                 <div id="dash-graph-3" class="graph-section">
