@@ -1,6 +1,8 @@
-This project is oriented mainly towards design, a way for me to see if I can use 
-all I have learned so far about HTML, CSS and design on a dashboard that contains
-a lot of elements.
+This project is oriented mainly towards design, it is purely front end, mainly 
+HTML and CSS.
+
+The login page is only a design exercise, the actual form is not active. The 
+Facebook and Google login buttons direct to the dashboard.
 
 The sliding sidebar is position: absolute and z-index was adjusted. The sliding is 
 applied with translateX() to avoid modifying any other element such as width or 

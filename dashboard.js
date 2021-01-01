@@ -25,8 +25,6 @@ const array = [
     { item: 'Pasta', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
 ];
 
-const url = 'https://dummyapi.io/data/api/';
-const apiKey = '5feddcaaa78ae44b49a6dca1';
 
 var barChart = new Chart(chart1, {
     type: 'bar',
