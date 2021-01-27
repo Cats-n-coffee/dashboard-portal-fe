@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
 
+@import 'login';
+@import 'buttons';
 @import 'config';
+@import 'dashboard';
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +15,7 @@ html,body {
     font-size: 10px;
     font-family: $regular-font;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     position: relative;
 }
 
@@ -22,10 +26,3 @@ a {
 li {
     list-style: none;
 }
-
-@import 'login';
-@import 'buttons';
-@import 'dashboard';
-@import 'media-500';
-@import 'media-900';
-@import 'media-1200';

@@ -10,8 +10,17 @@
 </head>
 <body>
     <div id="dash-main-container">
+        <header class="mobile-header">
+            <div id="logo">logo</div>
+            <div id="hamburger-menu">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </div>
+        </header>
         <div class="sidebar">
             <nav>
+                <i class="fas fa-times"></i>
                 <span id="expand-sidebar"><i class="fas fa-chevron-right"></i></span>
                 <div class="sidebar-username">
                     <span>Username</span>
@@ -24,9 +33,10 @@
                     <li><a href="#"><i class="far fa-user"></i><span>Profile</span></a></li>
                     <li><a href="#"><i class="fas fa-cogs"></i><span>Settings</span></a></li>
                 </ul>
+                <div id="mobile-logout">logout</div>
             </nav>
         </div>
-        <header>
+        <!-- <header class="desktop-header">
             <nav>
                 <ul>
                     <li><a href="#">Profile</a></li>
@@ -34,28 +44,36 @@
                     <li><a href="#">Logout</a></li>
                 </ul>
             </nav>
-        </header>
+        </header> -->
         <main>
             <div class="dash-summary-numbers">
                 <div id="dash-summary-1" class="summary-box">
-                    <span><i class="fas fa-hand-holding-usd"></i></span>
-                    <span>$2,345.45</span>
-                    <span>Total Sales</span>
+                    <span class="summary-icon"><i class="fas fa-hand-holding-usd"></i></span>
+                    <div class="summary-text">
+                        <span>$2,345.45</span>
+                        <span>Total Sales</span>
+                    </div>
                 </div>
                 <div id="dash-summary-2" class="summary-box">
-                    <span><i class="far fa-star"></i></span>
-                    <span>3</span>
-                    <span>New Products Releases</span>
+                    <span class="summary-icon"><i class="far fa-star"></i></span>
+                    <div class="summary-text">
+                        <span>3</span>
+                        <span>New Products Releases</span>
+                    </div>  
                 </div>
                 <div id="dash-summary-3" class="summary-box">
-                    <span><i class="fas fa-search"></i></span>
-                    <span>5</span>
-                    <span>Products Under Review</span>
+                    <span class="summary-icon"><i class="fas fa-search"></i></span>
+                    <div class="summary-text">
+                        <span>5</span>
+                        <span>Products Under Review</span>
+                    </div>
                 </div>
                 <div id="dash-summary-4" class="summary-box">
-                    <span><i class="fas fa-user-plus"></i></span>
-                    <span>123</span>
-                    <span>New Users</span>
+                    <span class="summary-icon"><i class="fas fa-user-plus"></i></span>
+                    <div class="summary-text">
+                        <span>123</span>
+                        <span>New Users</span>
+                    </div>
                 </div>
             </div>
             <div class="dash-graphs">
