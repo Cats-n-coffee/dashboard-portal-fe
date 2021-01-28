@@ -2,7 +2,9 @@
     #dash-main-container {
         main {
             .dash-graphs {
-                justify-content: space-evenly;
+                -webkit-box-pack: space-evenly;
+                    -ms-flex-pack: space-evenly;
+                        justify-content: space-evenly;
                 .graph-section {
                     max-width: 45vw;
                     

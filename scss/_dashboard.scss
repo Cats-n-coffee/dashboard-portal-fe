@@ -1,9 +1,12 @@
 #dash-main-container {
     height: 100%;
     width: 100%;
+    display: -ms-grid;
     display: grid;
-    grid-template-rows: auto 1fr 20px;
-    grid-template-columns: minmax(0,1fr);
+    -ms-grid-rows: auto 1fr 20px;
+        grid-template-rows: auto 1fr 20px;
+    -ms-grid-columns: minmax(0,1fr);
+        grid-template-columns: minmax(0,1fr);
     background: rgb(240, 239, 239);
     position: relative;
 
@@ -14,9 +17,13 @@
     .mobile-header {
         max-width: 100%;
         min-width: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 3em 2em;
 
         #logo {
@@ -36,8 +43,13 @@
         }
 
         #hamburger-menu {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             gap: 3px;
             cursor: pointer;
 
@@ -68,10 +80,19 @@
         padding: 4em 0;
 
         nav {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             width: 100%;
             height: 100%;
             gap: 4em;
@@ -100,8 +121,13 @@
             }
 
             ul {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 gap: 2.2em;
 
                 li {
@@ -117,7 +143,8 @@
                 }
 
                 li:focus, li:hover {
-                    transform: scale(1.1);
+                    -webkit-transform: scale(1.1);
+                            transform: scale(1.1);
                     
                     a {
                         color: $light-orange;
@@ -129,13 +156,18 @@
     }
 
     .sidebar.mobile-sidebar {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
     main {
+        display: -ms-grid;
         display: grid;
-        grid-template-rows: repeat(3, auto);
-        grid-template-columns: minmax(0, 1fr);
+        // -ms-grid-rows: (auto)[3];
+            grid-template-rows: repeat(3, auto);
+        -ms-grid-columns: minmax(0, 1fr);
+            grid-template-columns: minmax(0, 1fr);
         grid-template-areas: 
                             "summary"
                             "charts"
@@ -149,28 +181,46 @@
 
         .dash-summary-numbers {
             grid-area: summary;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
             gap: .5em;
-            flex-shrink: 1;
+            -ms-flex-negative: 1;
+                flex-shrink: 1;
             padding: .5em;
 
             .summary-box {
                 height: auto;
-                flex: 1 0 auto;
+                -webkit-box-flex: 1;
+                    -ms-flex: 1 0 auto;
+                        flex: 1 0 auto;
                 max-width: 100px;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 background: white;
-                align-items: center ;
+                -webkit-box-align: center ;
+                    -ms-flex-align: center ;
+                        align-items: center ;
                 padding: .5em;
                 border-radius: 10px;
                 
                 .summary-icon {
                     color: $medium-blue;
-                    justify-content: center;
-                    align-self: center;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    -ms-flex-item-align: center;
+                        align-self: center;
                     background: rgb(226, 226, 226);
                     border-radius: 50%;
                     padding: .3em;
@@ -178,9 +228,15 @@
                 }
 
                 .summary-text {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    flex-direction: column;
-                    align-content: space-evenly;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
+                    -ms-flex-line-pack: space-evenly;
+                        align-content: space-evenly;
                     padding-top: .5em;
 
                     span:first-child {
@@ -200,15 +256,23 @@
 
         .dash-graphs {
             grid-area: charts;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
             gap: 1em;
             width: 100%;
 
             .graph-section {
                 position: relative;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 height: auto;
                 width: 100%;
                 text-align: center;
@@ -297,7 +361,8 @@
     footer {
         max-width: 100%;
         min-width: 0;
-        grid-row: 3;
+        -ms-grid-row: 3;
+            grid-row: 3;
         width: 100%;
         text-align: center;
         color: black;

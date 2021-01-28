@@ -11,9 +11,15 @@
             
             .dash-summary-numbers {
                 .summary-box {
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                    align-content: unset;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: row;
+                            flex-direction: row;
+                    -webkit-box-pack: space-evenly;
+                        -ms-flex-pack: space-evenly;
+                            justify-content: space-evenly;
+                    -ms-flex-line-pack: unset;
+                        align-content: unset;
                     max-width: 200px;
                 }
             }
