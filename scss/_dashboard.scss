@@ -23,6 +23,18 @@
             font-size: 2em;
         }
 
+        #close-mobile-menu {
+            display: none;
+            font-size: 3em;
+            width: 30px;
+            height: 23px;
+            cursor: pointer;
+        }
+
+        #close-mobile-menu.close {
+            display: block;
+        }
+
         #hamburger-menu {
             display: flex;
             flex-direction: column;
@@ -37,29 +49,87 @@
             }
         }
 
-        
+        #hamburger-menu.open {
+            display: none;
+        }
     }
 
     .sidebar {
-        display: block;
+        display: none;
         position: absolute;
-        top: 6%;
+        top: 8em;
         left: 0;
         right: 0;
-        bottom: 0;
-        margin: auto;
+        bottom: 0;        
         width: 100%;
         height: auto;
+        background: $sidebar-background;
         z-index: 3;
+        padding: 4em 0;
 
-        #expand-sidebar {
-            display: none;
-        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            gap: 4em;
 
-        #mobile-logout {
-            font-size: 1.3em;
-            text-transform: uppercase;
+            #expand-sidebar {
+                display: none;
+            }
+    
+            #mobile-logout {
+                font-size: 1.5em;
+                text-transform: uppercase;
+                text-align: center;
+                color: white;
+                letter-spacing: .05em;
+                padding-top: 4em;
+            }
+
+            #mobile-logout:focus, #mobile-logout:hover {
+                color: $medium-green;
+            }
+            
+            .sidebar-username {
+                font-size: 2em;
+                color: white;
+                text-align: center;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 2.2em;
+
+                li {
+                    cursor: pointer;
+                    a {
+                        color: white;
+                        font-size: 1.8em;
+                    }
+
+                    span {
+                        margin-left: 1em;
+                    }
+                }
+
+                li:focus, li:hover {
+                    transform: scale(1.1);
+                    
+                    a {
+                        color: $light-orange;
+                     }
+                }
+            }
         }
+        
+    }
+
+    .sidebar.mobile-sidebar {
+        display: flex;
     }
 
     main {
@@ -74,6 +144,8 @@
         min-width: 0;
         gap: 1.5em;
         padding: .5em;
+        position: relative;
+        height: 100%;
 
         .dash-summary-numbers {
             grid-area: summary;
@@ -87,7 +159,6 @@
             .summary-box {
                 height: auto;
                 flex: 1 0 auto;
-                // min-width: 100px;
                 max-width: 100px;
                 display: flex;
                 flex-direction: column;
@@ -120,7 +191,6 @@
     
                     span:last-child {
                         font-size: 1.2em;
-                        // overflow-wrap: anywhere;
                         word-break: break-word;
                         text-align: center;
                     }
@@ -133,14 +203,12 @@
             display: flex;
             flex-wrap: wrap;
             gap: 1em;
-            // max-height: 37vh;
             width: 100%;
 
             .graph-section {
                 position: relative;
                 display: flex;
                 flex-direction: column;
-                max-height: 30vh;
                 height: auto;
                 width: 100%;
                 text-align: center;
@@ -151,14 +219,25 @@
                 p {
                     font-weight: bold;
                     font-size: 1.2em;
+                    padding-bottom: .5em;
+                }
+
+                .chart-wrapper {
+                    position: relative;
+                    max-height: 37vh;
+                    height: auto;
+                    width: 100%;
+                    text-align: center;
                 }
             }
         }
 
         .dash-logs {
-            max-height: 50vh;
-            overflow-y: auto;
+            grid-area: logs;
+            max-height: 40vh;
+            overflow-y: scroll;
             border-radius: 10px;
+            height: 100%;
 
             table, thead, tr, th, tbody, td {
                 display: block;
@@ -167,6 +246,7 @@
             table {
                 border-radius: 10px;
                 font-size: 1.2em;
+                height: 100%;
             }
 
             thead tr {
@@ -232,4 +312,12 @@
 #dash-summary-3 i { color: rgb(255, 136, 0) }
 #dash-summary-4 i { color: rgb(82, 21, 250) }
 
+    footer {
+        text-align: center;
+    }
+}
+
+#dash-main-container.stopscroll {
+    overflow-y: hidden;
+    position: fixed;
 }

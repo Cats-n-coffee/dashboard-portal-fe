@@ -4,6 +4,7 @@ const chart3 = document.getElementById('chart-3').getContext('2d');
 const dashTableBody = document.getElementById('dash-table-body');
 const sideBar = document.getElementsByClassName('sidebar')[0];
 const expandSidebar = document.getElementById('expand-sidebar');
+const mainContainer = document.getElementById('dash-main-container');
 
 const array = [
     { item: 'Apple', quantity: 2, price: '$0.90', message: 'Once upon a time a cat knocked at my door and let hinself in' },
@@ -115,6 +116,9 @@ var doughnutChart = new Chart(chart3, {
     options: {
         responsive: true,
         maintainAspectRatio: false,
+        legend: {
+            position: 'right'
+        }
     }
 });
 
@@ -141,4 +145,18 @@ expandSidebar.addEventListener('click', toggleSidebar);
 
 function toggleSidebar() {
     sideBar.classList.toggle('toggle-sidebar');
+}
+
+// Mobile menu toggle
+const openMenuBtn = document.getElementById('hamburger-menu');
+const closeMenuBtn = document.getElementById('close-mobile-menu');
+
+openMenuBtn.addEventListener('click', openSidebarMobile);
+closeMenuBtn.addEventListener('click', openSidebarMobile);
+
+function openSidebarMobile() {
+    openMenuBtn.classList.toggle('open');
+    sideBar.classList.toggle('mobile-sidebar');
+    closeMenuBtn.classList.toggle('close');
+    mainContainer.classList.toggle('stopscroll');
 }

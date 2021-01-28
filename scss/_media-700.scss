@@ -1,0 +1,13 @@
+@media screen and (min-width: 700px) {
+    #dash-main-container {
+        main {
+            .dash-graphs {
+                justify-content: space-evenly;
+                .graph-section {
+                    max-width: 45vw;
+                    
+                }
+            }
+        }
+    }
+}

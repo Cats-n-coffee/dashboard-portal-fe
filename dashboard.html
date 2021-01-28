@@ -12,6 +12,7 @@
     <div id="dash-main-container">
         <header class="mobile-header">
             <div id="logo">logo</div>
+            <i class="fas fa-times" id="close-mobile-menu"></i>
             <div id="hamburger-menu">
                 <span class="menu-bar"></span>
                 <span class="menu-bar"></span>
@@ -20,7 +21,7 @@
         </header>
         <div class="sidebar">
             <nav>
-                <i class="fas fa-times"></i>
+                
                 <span id="expand-sidebar"><i class="fas fa-chevron-right"></i></span>
                 <div class="sidebar-username">
                     <span>Username</span>
@@ -36,15 +37,6 @@
                 <div id="mobile-logout">logout</div>
             </nav>
         </div>
-        <!-- <header class="desktop-header">
-            <nav>
-                <ul>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-            </nav>
-        </header> -->
         <main>
             <div class="dash-summary-numbers">
                 <div id="dash-summary-1" class="summary-box">
@@ -79,14 +71,21 @@
             <div class="dash-graphs">
                 <div id="dash-graph-1" class="graph-section">
                     <p>Bar Chart</p>
-                    <canvas id="chart-1"></canvas>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-1"></canvas>
+                    </div> 
                 </div>
                 <div id="dash-graph-2" class="graph-section">
                     <p>Line Chart</p>
-                    <canvas id="chart-2"></canvas>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-2"></canvas>
+                    </div>
                 </div>
                 <div id="dash-graph-3" class="graph-section">
-                    <canvas id="chart-3"></canvas>
+                    <p>Doughnut Chart</p>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-3"></canvas>
+                    </div>
                 </div>
             </div>
             <div class="dash-logs">
