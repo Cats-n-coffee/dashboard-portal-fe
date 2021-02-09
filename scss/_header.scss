@@ -1,0 +1,54 @@
+.mobile-header {
+    max-width: 100%;
+    min-width: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 3em 2em;
+
+    #logo {
+        font-size: 2em;
+    }
+
+    #close-mobile-menu {
+        display: none;
+        font-size: 3em;
+        width: 30px;
+        height: 23px;
+        cursor: pointer;
+    }
+
+    #close-mobile-menu.close {
+        display: block;
+    }
+
+    #hamburger-menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        cursor: pointer;
+
+        .menu-bar {
+            height: 5px;
+            width: 30px;
+            background-color: black;
+            border-radius: 25%;
+
+            &:not(:first-child) {
+                margin-top: 3px;
+            }
+        }
+    }
+
+    #hamburger-menu.open {
+        display: none;
+    }
+}

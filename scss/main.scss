@@ -1,6 +1,28 @@
+// This main file contains all main containers and global styles, and also
+// variables and partials
+
 @import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
 
-@import 'config';
+// -------------- Variables
+// Fonts
+$regular-font: 'Archivo', sans-serif;
+
+// Backgrounds
+$input-background: rgb(224, 222, 222);
+$dash-background: rgb(240, 239, 239);
+$sidebar-background: rgba(15, 127, 219, 0.9);
+
+// Font colors
+$light-black: rgb(24, 24, 24);
+$medium-blue: rgb(15, 127, 219);
+$medium-green: rgb(2, 252, 2);
+$light-orange: rgb(250, 187, 52);
+
+// Buttons colors
+$button-blue: rgb(29, 149, 247);
+$button-green: rgb(115, 248, 115);
+
+/* ---------------------------------- GENERAL STYLES ------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -23,9 +45,52 @@ li {
     list-style: none;
 }
 
-@import 'login';
-@import 'buttons';
-@import 'dashboard';
+/* --------------------------------------- CONTAINER ----------------------------------- */
+#dash-main-container {
+    height: 100%;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 1fr 20px;
+        grid-template-rows: auto 1fr 20px;
+    -ms-grid-columns: minmax(0,1fr);
+        grid-template-columns: minmax(0,1fr);
+    background: rgb(240, 239, 239);
+    position: relative;
+    
+    &.stopscroll {
+        overflow-y: hidden;
+        position: fixed;
+    }
+}
+
+/* --------------------------------------- MAIN -------------------------------------- */
+main {
+    display: -ms-grid;
+    display: grid;
+    // -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+    -ms-grid-columns: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 
+                        "summary"
+                        "charts"
+                        "logs";
+    box-sizing: border-box;
+    min-width: 0;
+    padding: .5em;
+    position: relative;
+    height: 100%;
+} 
+
+// Partials
+@import 'header';
+@import 'sidebar';
+@import 'dash-numbers';
+@import 'dash-graphs';
+@import 'dash-logs';
+@import 'footer';
+
 @import 'media-500';
 @import 'media-700';
 @import 'media-900';

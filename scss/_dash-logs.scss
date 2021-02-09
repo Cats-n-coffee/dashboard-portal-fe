@@ -1,0 +1,62 @@
+.dash-logs {
+    grid-area: logs;
+    margin-top: 1.5em;
+    max-height: 40vh;
+    overflow-y: scroll;
+    border-radius: 10px;
+    height: 100%;
+
+    table, thead, tr, th, tbody, td {
+        display: block;
+    }
+
+    table {
+        border-radius: 10px;
+        font-size: 1.2em;
+        height: 100%;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody {
+        position: relative;
+        background: white;
+        border-radius: 10px;
+
+        tr {
+            border-bottom: 1px solid grey;
+            padding: .4em;
+
+            td {
+                border: none;
+                position: relative;
+                padding-left: 30%;
+
+            }
+
+            td:before {
+                position: absolute;
+                top: 0;
+                left: 6px;
+                width: 65%;
+                padding-right: 10px;
+                white-space: nowrap;
+            }
+
+            td:nth-child(1):before { content: 'Item'; font-weight: 600; }
+            td:nth-child(2):before { content: 'Quantity'; font-weight: 600; }
+            td:nth-child(3):before { content: 'Price'; font-weight: 600; }
+            td:nth-child(4):before { content: 'Message'; font-weight: 600; }
+        }
+
+        tr:nth-child(odd) {
+            background: rgb(186, 252, 186);
+        }
+
+        tr:nth-child(even) {
+            border-left: 1px solid green;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.dash-graphs {
+    grid-area: charts;
+    margin-top: 1.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+
+    .graph-section {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        background: white;
+        padding: 1em;
+        border-radius: 10px;
+
+        &:not(:first-child) {
+            margin: 1em 0 0 0;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 1.2em;
+            padding-bottom: .5em;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            max-height: 37vh;
+            height: auto;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

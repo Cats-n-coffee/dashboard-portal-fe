@@ -1,0 +1,98 @@
+.sidebar {
+    display: none;
+    position: absolute;
+    top: 8em;
+    left: 0;
+    right: 0;
+    bottom: 0;        
+    width: 100%;
+    height: auto;
+    background: $sidebar-background;
+    z-index: 3;
+    padding: 4em 0;
+
+    nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 100%;
+        height: 100%;
+
+        #expand-sidebar {
+            display: none;
+        }
+
+        #mobile-logout {
+            font-size: 1.5em;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            letter-spacing: .05em;
+            // padding-top: 4em;
+        }
+
+        #mobile-logout:focus, #mobile-logout:hover {
+            color: $medium-green;
+        }
+        
+        .sidebar-username {
+            font-size: 2em;
+            color: white;
+            text-align: center;
+        }
+
+        ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            
+                -ms-flex-direction: column;
+                    flex-direction: column;
+
+            li {
+                cursor: pointer;
+
+                &:not(:first-child) {
+                    margin-top: 2.2em;
+                }
+
+                a {
+                    color: white;
+                    font-size: 1.8em;
+                }
+
+                span {
+                    margin-left: 1em;
+                }
+            }
+
+            li:focus, li:hover {
+                -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                
+                a {
+                    color: $light-orange;
+                 }
+            }
+        }
+    }
+    
+}
+
+.sidebar.mobile-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}

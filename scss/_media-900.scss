@@ -21,7 +21,7 @@
             width: 240px;
             background: $sidebar-background;
             height: 100vh;
-            padding-top: 3em;
+            padding: 4em 0;
             z-index: 10;
             -webkit-transform: translateX(-213px);
                     transform: translateX(-213px);
@@ -57,7 +57,7 @@
                 }
     
                 .sidebar-username {
-                    padding: 2em 0;
+                    // padding: 2em 0;
                     text-align: center;
                     color: white;
                     font-size: 2.5em;
@@ -71,12 +71,15 @@
                     -webkit-box-direction: normal;
                         -ms-flex-direction: column;
                             flex-direction: column;
-                    gap: 3.5em;
                     padding: 0 2.7em;
     
                     li {
                         -webkit-transition: all 600ms ease-in-out;
                         transition: all 600ms ease-in-out;
+
+                        &:not(:first-child) {
+                            margin: 3.5em 0 0 0;
+                        }
     
                         a {
                             color: white;
@@ -114,10 +117,30 @@
         main {
             margin-left: 20px;
 
+            .dash-summary-numbers {
+                -ms-flex-wrap: nowrap; 
+                    flex-wrap: nowrap;
+
+                .numbers-half {
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+
             .dash-graphs {
                 max-height: 37vh;
+                -webkit-box-pack: justify; 
+                    -ms-flex-pack: justify; 
+                    justify-content: space-between;
+
                 .graph-section {
                     max-width: 30vw;
+
+                    &:last-child {
+                        margin: 0;
+                    }
 
                     .chart-wrapper {
                         height: 100%;
@@ -126,12 +149,8 @@
             }
 
             .dash-logs {
-                // grid-area: logs;
                 width: 100%;
-                // max-height: 40vh;
-                // background: white;
-                // overflow-y: scroll;
-                padding: 0 2em;
+                // padding: 0 2em;
                 border-radius: 10px;
 
                 table {
