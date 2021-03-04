@@ -17,7 +17,7 @@
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        height: auto;
+        min-height: 257px;
         width: 100%;
         text-align: center;
         background: white;
@@ -37,9 +37,16 @@
         .chart-wrapper {
             position: relative;
             max-height: 37vh;
-            height: auto;
+            height: 100%;
             width: 100%;
             text-align: center;
+            display: none;
+
+            &.show {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
         }
     }
 }

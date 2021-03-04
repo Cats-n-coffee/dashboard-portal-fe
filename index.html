@@ -42,15 +42,25 @@
                     <div id="dash-summary-1" class="summary-box">
                         <span class="summary-icon"><i class="fas fa-hand-holding-usd"></i></span>
                         <div class="summary-text">
-                            <span>$2,345.45</span>
-                            <span>Total Sales</span>
+                            <div class="spinner-wrapper">
+                                <span class="spinner-circle-small"></span>
+                            </div>
+                            <div class="after-spinner">
+                                <span>$2,345.45</span>
+                                <span>Total Sales</span>
+                            </div>
                         </div>
                     </div>
                     <div id="dash-summary-2" class="summary-box">
                         <span class="summary-icon"><i class="far fa-star"></i></span>
                         <div class="summary-text">
-                            <span>3</span>
-                            <span>New Products Releases</span>
+                            <div class="spinner-wrapper">
+                                <span class="spinner-circle-small"></span>
+                            </div>
+                            <div class="after-spinner">
+                                <span>3</span>
+                                <span>New Products Releases</span>
+                            </div>
                         </div>  
                     </div>
                 </div>
@@ -58,15 +68,25 @@
                     <div id="dash-summary-3" class="summary-box">
                         <span class="summary-icon"><i class="fas fa-search"></i></span>
                         <div class="summary-text">
-                            <span>5</span>
-                            <span>Products Under Review</span>
+                            <div class="spinner-wrapper">
+                                <span class="spinner-circle-small"></span>
+                            </div>
+                            <div class="after-spinner">
+                                <span>5</span>
+                                <span>Products Under Review</span>
+                            </div>
                         </div>
                     </div>
                     <div id="dash-summary-4" class="summary-box">
                         <span class="summary-icon"><i class="fas fa-user-plus"></i></span>
                         <div class="summary-text">
-                            <span>123</span>
-                            <span>New Users</span>
+                            <div class="spinner-wrapper">
+                                <span class="spinner-circle-small"></span>
+                            </div>
+                            <div class="after-spinner">
+                                <span>123</span>
+                                <span>New Users</span>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -74,24 +94,41 @@
             <section class="dash-graphs">
                 <div id="dash-graph-1" class="graph-section">
                     <p>Bar Chart</p>
+                    <div class="spinner-wrapper">
+                        <div class="spinner-circle-medium"></div>
+                    </div>
                     <div class="chart-wrapper">
                         <canvas id="chart-1"></canvas>
                     </div> 
                 </div>
                 <div id="dash-graph-2" class="graph-section">
                     <p>Line Chart</p>
+                    <div class="spinner-wrapper">
+                        <div class="spinner-circle-medium"></div>
+                    </div>
                     <div class="chart-wrapper">
                         <canvas id="chart-2"></canvas>
                     </div>
                 </div>
                 <div id="dash-graph-3" class="graph-section">
                     <p>Doughnut Chart</p>
+                    <div class="spinner-wrapper">
+                        <div class="spinner-circle-medium"></div>
+                    </div>
                     <div class="chart-wrapper">
                         <canvas id="chart-3"></canvas>
                     </div>
                 </div>
             </section>
             <section class="dash-logs">
+                <div class="spinner-wrapper">
+                    <span class="spinner-text">Retreiving your data</span>
+                    <div class="spinner-container">
+                        <span class="spinner-dot"></span>
+                        <span class="spinner-dot"></span>
+                        <span class="spinner-dot"></span>
+                    </div>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -102,7 +139,7 @@
                         </tr>
                     </thead>
                     <tbody id="dash-table-body">
-
+                        
                     </tbody>
                 </table>
             </section>

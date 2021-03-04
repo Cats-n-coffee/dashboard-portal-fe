@@ -5,27 +5,33 @@ const dashTableBody = document.getElementById('dash-table-body');
 const sideBar = document.getElementsByClassName('sidebar')[0];
 const expandSidebar = document.getElementById('expand-sidebar');
 const mainContainer = document.getElementById('dash-main-container');
+const tableLogs = document.getElementsByTagName('table')[0];
+const summaryText = document.querySelectorAll('.after-spinner');
+const chartWrappers = document.querySelectorAll('.chart-wrapper');
 
-const array = [
-    { item: 'Apple', quantity: 2, price: '$0.90', message: 'Once upon a time a cat knocked at my door and let hinself in' },
-    { item: 'Onion', quantity: 3, price: '$0.20', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Prune', quantity: 5, price: '$0.50', message: 'Once upon a time a cat' },
-    { item: 'Banana', quantity: 2, price: '$0.50', message: 'Once upon a time a cat knocked at my door and rolled over to ask for pets' },
-    { item: 'Eggplant', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Tofu', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Zucchini', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Bread', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Coffee', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Tea', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Milk', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Almonds', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Peanuts', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Spices', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Barley', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Rice', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-    { item: 'Pasta', quantity: 1, price: '$1.90', message: 'Once upon a time a cat knocked at my door' },
-];
+document.addEventListener('DOMContentLoaded', () => {
+    const spinnerLogs = document.querySelectorAll('.spinner-wrapper');
 
+    spinnerLogs.forEach(spinner => {
+        spinner.style.display = 'flex';
+
+        removeSpinner(spinner);
+    })
+    fetchData();
+});
+
+function removeSpinner(element) {
+    setTimeout(() => {
+        element.style.display = 'none';
+        tableLogs.classList.add('show');
+        summaryText.forEach(summary => {
+            summary.classList.add('show');
+        })
+        chartWrappers.forEach(chart => {
+            chart.classList.add('show');
+        })
+    }, 3000);
+}
 
 var barChart = new Chart(chart1, {
     type: 'bar',
@@ -122,11 +128,22 @@ var doughnutChart = new Chart(chart3, {
     }
 });
 
-populateTable(dashTableBody, array);
+// fetching data from data.json
+function fetchData() {
+
+    fetch('data.json')
+    .then(res => res.json())
+    .then(data => populateTable(dashTableBody, data))
+    .catch(err => console.log(err));
+}
+
+
+// populateTable(dashTableBody, array);
 
 function populateTable(wrapper, data) {
     for (let i = 0; i < data.length; i++) {
         var currentItem = data[i];
+        console.log(currentItem)
         
         var row = `<tr>
                         <td>${currentItem.item}</td>

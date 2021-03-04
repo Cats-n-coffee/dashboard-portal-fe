@@ -1,6 +1,7 @@
 .dash-logs {
     grid-area: logs;
     margin-top: 1.5em;
+    min-height: 40vh;
     max-height: 40vh;
     overflow-y: scroll;
     border-radius: 10px;
@@ -14,6 +15,11 @@
         border-radius: 10px;
         font-size: 1.2em;
         height: 100%;
+        display: none;
+
+        &.show {
+            display:block;
+        }
     }
 
     thead tr {
@@ -60,3 +66,4 @@
         }
     }
 }
+
